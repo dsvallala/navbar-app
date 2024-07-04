@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-error',
-  standalone: true,
-  imports: [],
   templateUrl: './error.component.html',
-  styleUrl: './error.component.css'
+  styleUrls: ['./error.component.css'],
+  host: { '[@fadeInAnimation]': '' }
 })
-export class ErrorComponent {
+export class ErrorComponent implements OnInit {
 
+  constructor(
+    private activatedRoute: ActivatedRoute) {
+  }
+
+  ngOnInit() {
+
+  }
 }
